@@ -3,8 +3,8 @@
 
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="icon" type="image/png" href="./images/lunaslogo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/lunaslogo.jpg">
     <title>Luna’s | Beyond Flavour</title>
 
     <!-- PRECONNECT -->
@@ -107,7 +107,7 @@
         height: 100vh;
         background: rgba(31, 20, 15, .96);
         backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         z-index: 999;
         padding: 120px 40px;
         transition: right .35s ease;
@@ -177,7 +177,7 @@
       .carousel-wrapper {
         position: relative;
         overflow: hidden;
-		padding: 0 8px;
+        padding: 0 8px;
       }
 
       .carousel {
@@ -509,6 +509,15 @@
           padding: 12px 24px;
         }
       }
+
+      .hero-welcome {
+        color: white;
+        font-size: clamp(18px, 2vw, 28px);
+        letter-spacing: 0.18em;
+        font-weight: 600;
+        margin-bottom: 14px;
+        opacity: 0.9;
+      }
     </style>
   </head>
 
@@ -526,21 +535,21 @@
       <a href="#contact">Contact</a>
       <a href="https://thelunaslab.github.io/shop">Order</a>
 
-          <div class="footer-socials">
+      <div class="footer-socials">
 
-            <a href="https://www.instagram.com/thelunaslab" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+        <a href="https://www.instagram.com/thelunaslab" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
 
-            <a href="https://www.facebook.com/thelunaslab" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
+        <a href="https://www.facebook.com/thelunaslab" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-            <a href="https://wa.me/919604320903?text=Hi!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+        <a href="https://wa.me/919604320903?text=Hi!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-          </div>
+      </div>
     </div>
 
     <!-- NAV -->
@@ -573,16 +582,22 @@
 
       <img src="./images/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Hero Image">
 
-      <div class="relative px-6 md:px-20 z-10">
+      <div class="relative px-6 md:px-20 z-10 pt-24 md:pt-28">
 
-        <h1 class="hero-title text-white text-5xl sm:text-6xl md:text-8xl leading-[1.1] mb-12">
+        <p class="hero-welcome mb-4">
+          Mabuhay! Welcome sa Luna's.
+        </p>
+
+        <h1 class="hero-title text-white text-5xl sm:text-6xl md:text-8xl leading-[1.1] mb-6 md:mb-8">
           A Taste of the <br>
           Philippines. <br>
           Hand-Crafted <br>
           in Pune.
         </h1>
 
-        <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
+		<a href="https://thelunaslab.github.io/shop" class="btn-ritual inline-flex items-center">
+		  Order Now
+		</a>
 
       </div>
 
@@ -683,65 +698,65 @@
         Our Curated Pairs
       </h2>
 
- <!--   <section id="combos" class="bg-[#FFF8E1] py-32"> -->
+      <!--   <section id="combos" class="bg-[#FFF8E1] py-32"> -->
 
-<!--        <h2 class="text-5xl md:text-7xl mb-20 md:mb-24 uppercase">
+      <!--        <h2 class="text-5xl md:text-7xl mb-20 md:mb-24 uppercase">
           Our Curated Pairs
         </h2> -->
 
-        <div class="carousel-wrapper text-center">
+      <div class="carousel-wrapper text-center">
 
-          <button class="arrow left" id="prevBtn" aria-label="Previous Slide">❮</button>
+        <button class="arrow left" id="prevBtn" aria-label="Previous Slide">❮</button>
 
-          <div class="carousel" id="carousel">
+        <div class="carousel" id="carousel">
 
-            <div class="card">
-              <img src="./images/combo_1.png" alt="Combo 1" loading="lazy">
-              <h3>Combo 1 - The Luna's Duo</h3>
-              <div class="subtitle">Perfect for your first time</div>
-              <div class="price">Special ₹549</div><br>
-              <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
-            </div>
-
-            <div class="card">
-              <img src="./images/combo_2.png" alt="Combo 2" loading="lazy">
-              <h3>Combo 2 - Signature Pair</h3>
-              <div class="subtitle">Our signature bestsellers</div>
-              <div class="price">Special ₹799</div><br>
-              <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
-            </div>
-
-            <div class="card">
-              <img src="./images/combo_3.png" alt="Combo 3" loading="lazy">
-              <h3>Combo 3 - Summer Chill Pair</h3>
-              <div class="subtitle">Refreshing and indulgent</div>
-              <div class="price">Special ₹499</div><br>
-              <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
-            </div>
-
-            <div class="card">
-              <img src="./images/combo_4.png" alt="Combo 4" loading="lazy">
-              <h3>Combo 4 - Coffee Lovers Pair</h3>
-              <div class="subtitle">Perfect for coffee lovers</div>
-              <div class="price">Special ₹449</div><br>
-              <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
-            </div>
-
-            <div class="card">
-              <img src="./images/combo_5.png" alt="Combo 5" loading="lazy">
-              <h3>Combo 5 - Taste of Luna's</h3>
-              <div class="subtitle">Try everything at once</div>
-              <div class="price">Special ₹729</div><br>
-              <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
-            </div>
-
+          <div class="card">
+            <img src="./images/combo_1.png" alt="Combo 1" loading="lazy">
+            <h3>Combo 1 - The Luna's Duo</h3>
+            <div class="subtitle">Perfect for your first time</div>
+            <div class="price">Special ₹549</div><br>
+            <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
           </div>
 
-          <button class="arrow right" id="nextBtn" aria-label="Next Slide">❯</button>
+          <div class="card">
+            <img src="./images/combo_2.png" alt="Combo 2" loading="lazy">
+            <h3>Combo 2 - Signature Pair</h3>
+            <div class="subtitle">Our signature bestsellers</div>
+            <div class="price">Special ₹799</div><br>
+            <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
+          </div>
+
+          <div class="card">
+            <img src="./images/combo_3.png" alt="Combo 3" loading="lazy">
+            <h3>Combo 3 - Summer Chill Pair</h3>
+            <div class="subtitle">Refreshing and indulgent</div>
+            <div class="price">Special ₹499</div><br>
+            <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
+          </div>
+
+          <div class="card">
+            <img src="./images/combo_4.png" alt="Combo 4" loading="lazy">
+            <h3>Combo 4 - Coffee Lovers Pair</h3>
+            <div class="subtitle">Perfect for coffee lovers</div>
+            <div class="price">Special ₹449</div><br>
+            <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
+          </div>
+
+          <div class="card">
+            <img src="./images/combo_5.png" alt="Combo 5" loading="lazy">
+            <h3>Combo 5 - Taste of Luna's</h3>
+            <div class="subtitle">Try everything at once</div>
+            <div class="price">Special ₹729</div><br>
+            <a href="https://thelunaslab.github.io/shop" class="btn-ritual">Order Now</a>
+          </div>
 
         </div>
 
-        <div class="dots" id="dots"></div>
+        <button class="arrow right" id="nextBtn" aria-label="Next Slide">❯</button>
+
+      </div>
+
+      <div class="dots" id="dots"></div>
 
       </div>
 

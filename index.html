@@ -518,6 +518,188 @@
         margin-bottom: 14px;
         opacity: 0.9;
       }
+
+      /* =========================
+	   ABOUT US — PREMIUM STORY SECTION
+	========================= */
+      .about-section {
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg,
+            #fff8e1 0%,
+            #fff3d2 35%,
+            #fff8e1 100%);
+      }
+
+      .about-section::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: -10%;
+        width: 420px;
+        height: 420px;
+        background: rgba(255, 184, 0, 0.10);
+        filter: blur(100px);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .about-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+        width: 380px;
+        height: 380px;
+        background: rgba(212, 176, 107, 0.12);
+        filter: blur(100px);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .about-wrapper {
+        position: relative;
+        z-index: 2;
+      }
+
+      .about-main-title {
+        font-size: clamp(52px, 8vw, 110px);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+      }
+
+      .about-intro-title {
+        font-size: clamp(38px, 5vw, 72px);
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+
+      .about-intro-text {
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.9;
+        color: rgba(62, 39, 35, 0.78);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .story-card {
+        background: rgba(255, 255, 255, 0.62);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(212, 176, 107, .22);
+        border-radius: 36px;
+        padding: 60px;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, .06);
+        margin-bottom: 80px;
+      }
+
+      .story-title {
+        font-size: clamp(42px, 5vw, 72px);
+        line-height: 1;
+        letter-spacing: -0.05em;
+        margin-bottom: 12px;
+      }
+
+      .story-label {
+        text-transform: uppercase;
+        letter-spacing: .35em;
+        font-size: 12px;
+        color: #b8860b;
+        margin-bottom: 42px;
+        display: block;
+      }
+
+      .story-text {
+        font-size: 18px;
+        line-height: 1.95;
+        color: rgba(62, 39, 35, .78);
+        margin-bottom: 26px;
+      }
+
+      .story-image-wrap {
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+      }
+
+      .story-image {
+        width: 100%;
+        transition: transform .7s ease;
+        transform: scale(1.01);
+      }
+
+      .story-image:hover {
+        transform: scale(1.06);
+      }
+
+      .quote-block {
+        max-width: 1100px;
+        margin: 0 auto 120px;
+        text-align: center;
+      }
+
+      .quote-block p {
+        font-size: clamp(32px, 4vw, 64px);
+        line-height: 1.28;
+        letter-spacing: -0.04em;
+        font-weight: 300;
+        color: #3E2723;
+      }
+
+      .community-title {
+        font-size: clamp(38px, 5vw, 64px);
+        line-height: 1.05;
+        letter-spacing: -0.05em;
+      }
+
+      .community-text {
+        font-size: 20px;
+        line-height: 2;
+        color: rgba(62, 39, 35, .78);
+      }
+
+      @media(max-width:1024px) {
+        .story-card {
+          padding: 42px;
+        }
+      }
+
+      @media(max-width:768px) {
+        .about-main-title {
+          font-size: 64px;
+          margin-bottom: 70px !important;
+        }
+
+        .about-intro-title {
+          font-size: 42px;
+        }
+
+        .story-card {
+          padding: 28px;
+          border-radius: 28px;
+          margin-bottom: 50px;
+        }
+
+        .story-title {
+          font-size: 42px;
+        }
+
+        .story-text {
+          font-size: 16px;
+          line-height: 1.9;
+        }
+
+        .community-text {
+          font-size: 17px;
+          line-height: 1.9;
+        }
+
+        .quote-block {
+          margin-bottom: 80px;
+        }
+      }
     </style>
   </head>
 
@@ -758,162 +940,214 @@
 
     <section id="aboutus" class="container mx-auto px-6 md:px-10">
 
-      <h2 class="text-5xl md:text-7xl mb-20 md:mb-24 uppercase tracking-tighter">
-        About Us
-      </h2>
+      <div class="about-wrapper container mx-auto px-6 md:px-10">
 
-      <!-- ================= HERO STORY ================= -->
-      <div class="text-center max-w-4xl mx-auto mb-24">
-
-        <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-8">
-          More Than Desserts.
+        <!-- MAIN TITLE -->
+        <h2 class="text-5xl md:text-7xl mb-12 md:mb-16 uppercase tracking-tighter">
+          About Us
         </h2>
 
-        <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
-          Luna’s was never meant to be just a dessert brand.
-          It began with a feeling — warmth, comfort,
-          and the kind of happiness that stays long after the last bite.
-        </p>
+        <!-- INTRO -->
+        <div class="text-center max-w-4xl mx-auto mb-24">
 
-      </div>
+          <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-8">
+            More Than Desserts.
+          </h2>
 
-      <!-- ================= LUNA STORY ================= -->
-      <h2 class="text-center text-4xl md:text-6xl mb-12 font-semibold color-[#d4b06b]">
-        🐾 Meet Luna
-        <span class="text-center text-xl md:text-2xl text-gray-700"> —&nbsp;&nbsp;THE BOSS</span>
-      </h2>
+          <p class="about-intro-text">
+            Luna’s began with a feeling.<br><br>
 
-      <div class="grid md:grid-cols-2 gap-20 px-10 items-center mb-20">
+            The warmth of home.<br>
+            The comfort of shared desserts.<br>
+            The kind of happiness that lingers long after the final spoonful.<br><br>
 
-        <div class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="./images/luna.jpeg" class="w-full hover:scale-105 transition duration-700" alt="Luna Story">
-        </div>
-
-        <div class="max-w-xl">
-
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            She’s the real boss behind Luna’s.
-            The inspiration behind our name,
-            our energy, and the spirit of everything we create.
-          </p>
-
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            Full of joy, warmth, and unconditional love,
-            Luna reminds us that the best moments in life are simple —
-            shared smiles, comfort food, and time spent together.
-          </p>
-
-          <p class="text-lg leading-relaxed text-gray-700">
-            Every dessert we make carries that same feeling:
-            soft happiness in every bite.
+            What started as a taste of the Philippines
+            slowly became a ritual of comfort in Pune.
           </p>
 
         </div>
 
-      </div>
+        <!-- QUOTE -->
+        <div class="quote-block">
 
-      <!-- ================= YNA STORY ================= -->
-      <h2 class="text-center text-4xl md:text-6xl mb-12 font-semibold color-[#d4b06b]">
-        <!-- 🔪 -->
-        👩🏻‍🍳 Meet Yna
-        <span class="text-center text-xl md:text-2xl text-gray-700"> —&nbsp;&nbsp;OUR FILIPINO CHEF</span>
-      </h2>
-
-      <div class="grid md:grid-cols-2 gap-20 px-10 items-center mb-20">
-
-        <div class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="./images/yna.jpeg" class="w-full hover:scale-105 transition duration-700" alt="Yna Story">
-        </div>
-
-        <div class="max-w-xl">
-
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            "When I moved to Pune, I realized how much I missed home.
-            Not just the place but the feeling.
-            The warmth. The comfort. The way food brings people together.
-            Filipino desserts have always been a part of that for me.
-            So when I found friends here, I shared with them a piece of my home,
-            The Mango Float
-          </p>
-
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            Not to replace what they already love, but to offer something new, something heartfelt.
-            This isnt just a mango float, a new taste for you, but a story of where I come from."
-          </p>
-
-          <p class="text-lg leading-relaxed text-gray-700">
-            &nbsp;
+          <p>
+            “Every dessert carries a memory.
+            Ours just happens to taste like home.”
           </p>
 
         </div>
 
-      </div>
+        <!-- LUNA -->
+        <div class="story-card">
 
-      <!-- ================= SNEHAL STORY ================= -->
-      <h2 class="text-center text-4xl md:text-6xl mb-12 font-semibold color-[#d4b06b]">
-        👩🏻‍🎨 Meet Snehal
-        <span class="text-center text-xl md:text-2xl text-gray-700"> —&nbsp;&nbsp;OUR BRAND LEAD</span>
-      </h2>
+          <div class="grid md:grid-cols-2 gap-14 md:gap-20 items-center">
 
-      <div class="grid md:grid-cols-2 gap-20 px-10 items-center mb-20">
-        <div class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="./images/snehal.jpeg" class="w-full hover:scale-105 transition duration-700" alt="Yna Story">
+            <div class="story-image-wrap">
+              <img src="./images/luna.jpeg" alt="Luna" class="story-image brightness-[1.02] saturate-110">
+            </div>
+
+            <div class="max-w-lg">
+
+              <h2 class="story-title">
+                Meet Luna
+              </h2>
+
+              <span class="story-label">
+                THE HEART BEHIND LUNA’S
+              </span>
+
+              <p class="story-text">
+                Luna is more than our inspiration.
+                She’s the soul of everything we create.
+              </p>
+
+              <p class="story-text">
+                Full of warmth, joy, and unconditional love,
+                she reminds us that the best moments in life
+                are often the simplest ones —
+                shared desserts, laughter,
+                and time spent together.
+              </p>
+
+              <p class="story-text mb-0">
+                Every spoonful we serve carries that same feeling:
+                soft happiness made to be shared.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="max-w-xl">
+        <!-- YNA -->
+        <div class="story-card">
 
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            "When Yna first shared The Mango Float with me,
-            my first reaction was "WOW!!!" and I instantly wanted my family to try it too.
-          </p>
+          <div class="grid md:grid-cols-2 gap-14 md:gap-20 items-center">
 
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            So what started between two friends soon turned into something more,
-            a way to bring a new taste and experience to people here in Pune.
-          </p>
+            <div class="story-image-wrap md:order-2">
+              <img src="./images/yna.jpeg" alt="Yna" class="story-image brightness-[1.02] saturate-110">
+            </div>
 
-          <p class="text-lg leading-relaxed text-gray-700">
-            With Yna's Filipino authenticity, we're shaping how Pune discovers Filipino desserts.
-            Bringing joy and smile to every soul that is yet to be turned."
-          </p>
+            <div class="max-w-lg md:order-1">
+
+              <h2 class="story-title">
+                Meet Yna
+              </h2>
+
+              <span class="story-label">
+                OUR FILIPINO CHEF
+              </span>
+
+              <p class="story-text">
+                When Yna moved to Pune,
+                she missed more than just home.
+                She missed the feeling that came with it —
+                comfort, warmth,
+                and the way Filipino desserts bring people together.
+              </p>
+
+              <p class="story-text">
+                So she began sharing a small piece of that world
+                through the Mango Float —
+                a dessert deeply rooted in Filipino celebrations,
+                nostalgia, and togetherness.
+              </p>
+
+              <p class="story-text mb-0">
+                Luna’s became a way to introduce Pune
+                to flavors that feel personal,
+                comforting,
+                and unforgettable.
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
 
-      </div>
+        <!-- SNEHAL -->
+        <div class="story-card">
 
-      <!-- ================= COMMUNITY / TRUST ================= -->
-      <div class="text-center max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-14 md:gap-20 items-center">
 
-        <h3 class="text-4xl md:text-5xl mb-10 font-semibold">
-          Made for Moments That Matter
-        </h3>
+            <div class="story-image-wrap">
+              <img src="./images/snehal.jpeg" alt="Snehal" class="story-image brightness-[1.02] saturate-110">
+            </div>
 
-        <p class="text-lg md:text-xl leading-relaxed text-gray-700">
-          From cozy evenings to celebrations,<br>
-          Luna’s desserts are created to bring people together —<br>
-          one spoon, one smile, one memory at a time.
-        </p>
+            <div class="max-w-lg">
 
-        <p class="mt-6 text-lg md:text-xl leading-relaxed text-gray-700">
-          Inspired by Filipino dessert culture and crafted fresh in Pune,<br>
-          Luna’s brings comforting tropical flavors
-          to a new generation of dessert lovers.
-        </p>
+              <h2 class="story-title">
+                Meet Snehal
+              </h2>
 
-        <p class="mt-6 text-lg md:text-xl leading-relaxed text-gray-700">
-          Every batch is made fresh, in limited quantities,<br>
-          so each order feels personal, special, and worth the wait.
-        </p>
+              <span class="story-label">
+                OUR BRAND LEAD
+              </span>
 
-        <p class="mt-6 text-lg md:text-xl leading-relaxed text-gray-700">
-          We also accept bulk orders for events & celebrations.<br>
-          Reach out via WhatsApp to create something special.
-        </p>
+              <p class="story-text">
+                The first time Snehal tried the Mango Float,
+                it instantly felt special —
+                the kind of dessert you immediately want
+                your friends and family to experience too.
+              </p>
+
+              <p class="story-text">
+                What started as a shared moment between friends
+                slowly evolved into something bigger:
+                bringing a new dessert culture
+                and experience to Pune.
+              </p>
+
+              <p class="story-text mb-0">
+                Together,
+                Luna’s blends Filipino authenticity
+                with thoughtful storytelling,
+                creating desserts that feel joyful,
+                memorable,
+                and deeply personal.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- COMMUNITY -->
+        <div class="text-center max-w-5xl mx-auto pt-10">
+
+          <h3 class="text-4xl md:text-5xl mb-10 font-semibold">
+            Made for Moments That Matter
+          </h3>
+
+          <p class="community-text">
+            From cozy evenings to celebrations,
+            Luna’s desserts are created to bring people together —
+            one spoon, one smile, one memory at a time.
+          </p>
+
+          <p class="community-text mt-8">
+            Inspired by Filipino dessert culture
+            and crafted fresh in Pune,
+            every batch is made in limited quantities
+            so each order feels personal,
+            warm,
+            and worth the wait.
+          </p>
+
+          <p class="community-text mt-8">
+            We also create bulk dessert experiences
+            for celebrations, gatherings, and special events.
+          </p>
+
+        </div>
 
       </div>
 
     </section>
-
+    \
     <!-- REVIEWS -->
     <section id="reviews" class="container mx-auto px-6 md:px-10">
 
